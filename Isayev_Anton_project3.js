@@ -39,7 +39,10 @@ var ammo = [
 			100,
 			150
 			];
-
+var survival =  [ " completed " ,
+                   " failed "
+                ] ;
+			   
 
 
 //property number
@@ -64,14 +67,15 @@ var ammo = [
 };
 
 
+//property array
 var ammocountup = function(a) {
-var tf = {
+   var tf = {
 
 			"name":         "firefight",
 			"duration":         5,
 			"if-run":           2,
 			"norm":             3
-    	  }
+    	    }
 
 	for (tf.duration ; ammo[1] < ammo[3]; ammo[1] +=5) {
 	if (ammo[1] = ammo[3]); {
@@ -79,8 +83,23 @@ var tf = {
 	};	
   };
 };
-var getarrtime = function(ammo){	
-};	
+	var getarrtime = function(ammo){	
+};
+
+
+//propery boolean
+var mission = function (s) {
+var actual = true ;
+	if (actual === true) {
+          return survival = s[0];
+}	else {
+          return survival = s[1];
+ 	};
+  };
+	var reportactual = function(survival){
+};
+
+
 
 
 
@@ -89,7 +108,7 @@ var getarrtime = function(ammo){
 //main code
 
 //property number
-var gt = counttime(currenttime); {
+ var gt = counttime(currenttime); {
 		console.log(" if we want to play " + gt.want + " missions we will finish at " +
 		gt.endtime + " o'clock ")
 };
@@ -97,4 +116,10 @@ var gt = counttime(currenttime); {
 
  var tf = ammocountup(ammo); {
 	console.log(" for a five minute fight we will use " + ammo + " bullets "   );		
+};
+
+
+// function 2
+ var reportactual = mission(survival); {
+	console.log(" We have " + survival + " the mission ");
 };
