@@ -37,19 +37,25 @@ var currenttime = 9;
 
 //property number
 
- 
-	var counttime = function(c)  { 
-	var missionsperhour = 1;
-	var endtime = 12;
-		while (endtime > c)  { 
-		c = c + missionsperhour ; 
-		if (c = endtime)  {
-		return endtime ; 
+ var counttime = function(c)  { 
+ 	var gt = { 
+ 		
+ 		 "name":     "playtime",
+ 		 "time":     1,
+ 		 "want":     3,
+ 		 "endtime":  12
+        };
+  
+		while (gt.endtime > c)  { 
+		c = c + gt.time ; 
+		if (c = gt.endtime)  {
+			return gt ;	
       };		
 	}; 
  };
  var reportcount = function(currenttime){
-		console.log(" We will finish " + endtime + " o'clokc ")
+		console.log(" if we want to play " + gt.want + " missions we will finish at " +
+		gt.endtime + " o'clock ")
 };
 
 
@@ -58,7 +64,8 @@ var currenttime = 9;
 
 //main code
 
-
-var endtime = counttime(currenttime); {
-	console.log(" We will finish " + endtime + " o'clokc ")
-};
+//property number
+var gt = counttime(currenttime); {
+		console.log(" if we want to play " + gt.want + " missions we will finish at " +
+		gt.endtime + " o'clock ")
+}; 
