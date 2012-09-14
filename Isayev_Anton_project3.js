@@ -2,36 +2,37 @@
 // Project 3
 // SDI 1209
 
-var myname = " Anton ";
+var name = " Anton ";
 var myfriends = [
 				" Christian ", 
 				" Curtis ", 
 				" Val "
 				]; 
-var PC = 4 ;
 var games =  [
 			 " Left 4 Dead ",
 			 " Diablo 3 ",	
 		     " Serious Sam ",
 		     " Borderlands "
 		     ];
-var json = [
-			{
-			 friend: " Curtis ",
-			 playertype: " good blocking ",
-			 role: " gunner " 
-			},
-			{
-			 friend: " Val ",
-			 playertype: " support ",
-			 role: " medic "
-			},
-			{
-			 friend: " Christian ",
-			 playertype: " sharpshooter ",
-			 role: " sniper "
-			}
-           ];
+var json = {
+			"friends" :[
+			 {
+			 "friend": " Curtis ",
+			 "playertype": " good blocking ",
+			 "role": " gunner " 
+			 },
+		     {
+			 "friend": " Val ",
+			 "playertype": " support ",
+			 "role": " medic "
+			 },
+			 {
+			 "friend": " Christian ",
+			 "playertype": " sharpshooter ",
+			 "role": " sniper "
+			 }
+			]
+          };
 var currenttime = 9;
 var ammo = [
 			90,
@@ -42,7 +43,6 @@ var ammo = [
 var survival =  [ " completed " ,
                    " failed "
                 ] ;
-			   
 
 
 //property number
@@ -87,7 +87,7 @@ var ammocountup = function(a) {
 };
 
 
-//propery boolean
+//property boolean
 var mission = function (s) {
 var actual = true ;
 	if (actual === true) {
@@ -100,10 +100,29 @@ var actual = true ;
 };
 
 
+var playerrole = function(j){
+  var player = "sniper";
+  if (player = "sniper"){
+     return  x = j.friends[2];
+       }
+  else {
+  		if (player = "medic") {
+     		return x = j.friends[1];
+     		}
+  else      {
+  	 return x = j.friends[0];
+  	 }
+  }
+}
+var findplayer = playerrole(json); {
+};
 
 
+//var end = function(n, m){
+//for (i = 0; i < 3; i++ )
 
-
+//};
+//var endofnight = end(name, myfrinds)
 
 //main code
 
@@ -123,3 +142,6 @@ var actual = true ;
  var reportactual = mission(survival); {
 	console.log(" We have " + survival + " the mission ");
 };
+
+var findplayer = playerrole(json)
+    console.log(x)
